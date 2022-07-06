@@ -1,0 +1,126 @@
+/* ***Styles main file*** *Mobile-first structure* */
+:root {
+    --clr-primary: #1a1b1f;
+}
+/* ----------------------- */
+
+
+.clr-light {
+    opacity: 0.6;
+}
+h2, p {
+    color: var(--clr-primary);
+}
+h2 {
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+h3 {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1.2em;
+}
+p {
+    margin: 1.5em 0;
+    font-size: 1rem;
+    line-height: 1.8em;
+}
+.active-btn {
+    text-transform: uppercase;
+    padding: 1.2em 1.9em;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    background-color: #1a1b1f;
+}
+.container {
+    width: 95%;
+    margin-inline: auto;
+    text-align: center;
+}
+.label {
+    text-transform: uppercase;
+    margin-bottom: 1.5em;
+    letter-spacing: 1px;
+    font-size: 0.8em;
+}
+.section {
+    margin-bottom: 110px;
+}
+.sub-section {
+    /* margin: 50px auto 50px; */
+    margin: 80px 0;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+}
+.sub-section_col {
+    width: 75%;
+    margin-inline: auto;
+}
+.sub-section img {
+    width: 100%;
+    max-width: 680px;
+    flex-basis: 70%;
+}
+.sub-section .text-sub-section_wrap {
+    margin-top: 50px;
+}
+
+
+/* *** Header *** */
+header nav {
+    padding: 3% 5%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav .logo {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    font-weight: 900;
+}
+header nav .fa-solid {
+    font-size: 1.5rem;
+}
+.intro-header {
+    width: 95%;
+    margin-inline: auto;
+    padding: 165px 0;
+    background-image: url(../images/bg-1.svg);
+    background-size: cover;
+    background-position: center;
+}
+.intro-content {
+    width: 80%;
+    margin-inline: auto;
+    text-align: center;
+}
+.intro-content h1, .intro-content p {
+    color: #fff;
+}
+.intro-content h1 {
+    font-size: 3.2rem;
+    font-weight: 400;
+    margin-bottom: 0.4em;
+}
+.intro-content .active-btn {
+    margin-top: 2em;
+    font-size: 0.9rem;
+    color: #000;
+    background-color: #fff;
+}
+.ideology-content {
+    width: 81%;
+    margin: 100px auto 100px;
+    text-align: center;
+}
+.ideology-content h2 {
+    font-size: 1.9rem;
+    line-height: 1.5em;
+}

@@ -1,0 +1,21 @@
+/* ***General & Common Styles*** */
+/* Fonts: Montserrat ( 400, 500 ) */
+
+@font-face {
+    font-family: primaryFont;
+    src: url(../fonts/Montserrat_wght.ttf)
+}
+
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+body {
+    font-family: primaryFont, Arial, Helvetica, sans-serif;
+}
+a {
+    text-decoration: none;
+}
+hr {
+    opacity: 0.3;
+}
