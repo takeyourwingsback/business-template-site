@@ -1,11 +1,14 @@
 /* ***General & Common Styles*** */
 /* Fonts: Montserrat ( 400, 500 ) */
 
+:root {
+    --clr-primary: #1a1b1f;
+}
+
 @font-face {
     font-family: primaryFont;
     src: url(../fonts/Montserrat_wght.ttf)
 }
-
 
 * {
     margin: 0; padding: 0; box-sizing: border-box;
@@ -15,6 +18,10 @@ body {
 }
 a {
     text-decoration: none;
+    color: var(--clr-primary);
+}
+ul {
+    list-style-type: none;
 }
 hr {
     opacity: 0.3;

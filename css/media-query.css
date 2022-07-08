@@ -1,3 +1,76 @@
 /* 
     *** Enter already the finished code here ***
 */
+
+@media (min-width: 991px) {
+    header nav {
+        padding: 30px 0;
+    }
+    nav .fa-solid {
+        display: none;
+    }
+    .nav-links {
+        position: static; top: 0; left: 0;
+        transform: none;
+        opacity: 1;
+        background-color: transparent;
+        transition: none;
+    }
+    .nav-links ul {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .nav-links ul li {
+        padding: 0;
+        margin: 0 20px;
+    }
+    .nav-links ul li a {
+        color: #000;
+    }
+    .intro-header {
+        width: 95%;
+        padding: 200px 0;
+    }
+    .container {
+        width: 60%;
+    }
+    .c-wide {
+        width: 95%;
+    }
+    .sub-section {
+        flex-wrap: nowrap;
+    }
+    .sub-section .text-sub-section_wrap {
+        flex-basis: 31%;
+        margin-top: 0;
+        text-align: left;
+    }
+    .sub-section .img-sub-section_wrap {
+        flex-basis: 60%;
+    }
+    .sub-section_col {
+        flex-basis: 29%;
+        text-align: left;
+    }
+    .intro-content h1 {
+        font-size: 4rem;
+        margin-bottom: 0.2em;
+    }
+    .intro-content p {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+    .section-bottom .container {
+        padding: 120px 0;
+    }
+    .bottom-content {
+        max-width: 750px;
+    }
+    .bottom-content h2 {
+        font-size: 2.3rem;
+    }
+    .bottom-content p {
+        font-size: 1.2rem;
+    }
+}

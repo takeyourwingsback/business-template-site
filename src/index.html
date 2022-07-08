@@ -13,11 +13,21 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">Business</div>
-            <!-- <div class="nav-links"></div> -->
-            <i class="fa-solid fa-bars"></i>
-        </nav>
+        <div class="container c-wide">
+            <nav>
+                <div class="logo"><a href="">Business</a></div>
+                <div class="nav-links" id="navLinks">
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Work</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <i class="fa-solid fa-bars" onclick="menuToggle()"></i>
+            </nav>
+        </div>
 
         <div class="intro-header">
             <div class="intro-content">
@@ -36,7 +46,7 @@
             </div>
             <hr>
 
-            <div class="sub-section">
+            <div class="sub-section wrap-reverse align-center">
                 <div class="text-sub-section_wrap">
                     <div class="label clr-light">About</div>
                     <h2>Who we are</h2>
@@ -45,10 +55,12 @@
                     </p>
                     <a class="active-btn" href="#">Learn more</a>
                 </div>
-                <img src="../images/placeholder-1.svg" alt="Placeholder #1">
+                <div class="img-sub-section_wrap">
+                    <img src="../images/placeholder-1.svg" alt="Placeholder #1">
+                </div>
             </div>
 
-            <div class="sub-section">
+            <div class="sub-section wrap-reverse align-center direction-reverse">
                 <div class="text-sub-section_wrap">
                     <div class="label clr-light">Team</div>
                     <h2>What we do</h2>
@@ -57,7 +69,9 @@
                     </p>
                     <a class="active-btn" href="#">Learn more</a>
                 </div>
-                <img src="../images/placeholder-2.svg" alt="Placeholder #2">
+                <div class="img-sub-section_wrap">
+                    <img src="../images/placeholder-2.svg" alt="Placeholder #2">
+                </div>
             </div>
         </div>
     </div>
@@ -75,8 +89,6 @@
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
                     </p>
                 </div>
-            </div>
-            <div class="sub-section">
                 <div class="sub-section_col">
                     <h3>15 best blogs to follow about Web Design</h3>
                     <div class="label clr-light">Feb 21, 2019</div>
@@ -84,8 +96,6 @@
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
                     </p>
                 </div>
-            </div>
-            <div class="sub-section">
                 <div class="sub-section_col">
                     <h3>7 of the best examples of beautiful blog design</h3>
                     <div class="label clr-light">Feb 21, 2019</div>
@@ -98,13 +108,17 @@
     </div>
 
     <div class="section section-bottom">
-        <div class="bottom-content">
-            <h2>Grow your business</h2>
-            <p class="clr-light">Today is the day to build the business of your dreams. Share your mission with the world — and blow your customers away.</p>
-            <a class="active-btn" href="#">Start now</a>
+        <div class="container c-wide">
+            <div class="bottom-content">
+                <h2>Grow your business.</h2>
+                <p class="clr-light">Today is the day to build the business of your dreams. Share your mission with the world — and blow your customers away.</p>
+                <a class="active-btn" href="#">Start now</a>
+            </div>
         </div>
     </div>
 
-    <div class="footer_">Cybergoth portfolio piece &star;</div>
+    <div class="footer_">Cybergoth portfolio piece &star; 2022</div>
+
+    <script src="../scripts/menuToggler.js"></script>
 </body>
 </html>
