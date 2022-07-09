@@ -41,6 +41,9 @@ p {
     margin-inline: auto;
     text-align: center;
 }
+.banner {
+    margin-bottom: 100px;
+}
 .label {
     text-transform: uppercase;
     margin-bottom: 1.5em;
@@ -81,7 +84,7 @@ p {
 .sub-section .text-sub-section_wrap {
     margin-top: 50px;
 }
-.section-bottom .container {
+.banner-bottom .container {
     padding: 100px 0;
     text-align: center;
     background-color: rgb(235, 234, 234);
@@ -144,39 +147,77 @@ header nav .logo a {
     font-weight: 700;
     color: #dedede;
 }
-.intro-header {
-    width: 90%;
-    margin-inline: auto;
+.banner-intro .container {
     padding: 150px 0;
     background-image: url(../images/bg-1.svg);
     background-size: cover;
     background-position: center;
 }
-.intro-content {
+.banner-page .container {
+    padding: 180px 0;
+    background: linear-gradient(to top left, rgb(28, 25, 25), rgb(0, 0, 0));
+}
+.banner-content {
     width: 80%;
     margin-inline: auto;
     text-align: center;
 }
-.intro-content h1, .intro-content p {
+.banner-content h1, .banner-content p {
     color: #fff;
 }
-.intro-content h1 {
+.banner-content h1 {
     font-size: 3.2rem;
     font-weight: 400;
     margin-bottom: 0.4em;
 }
-.intro-content .active-btn {
+.banner-content .active-btn {
     margin-top: 2em;
     font-size: 0.9rem;
     color: #000;
     background-color: #fff;
 }
-.ideology-content {
+.intro-headline {
     width: 81%;
     margin: 100px auto 100px;
     text-align: center;
 }
-.ideology-content h2 {
-    font-size: 1.9rem;
+.intro-headline h2 {
     line-height: 1.5em;
+}
+
+
+/* ****ABOUT.HTML**** */
+
+.about-content {
+    width: 80%;
+    margin-inline: auto;
+}
+.section-services .sub-section .sub-section_col {
+    flex-basis: 40%;
+}
+.service-content img {
+    margin-bottom: 30px;
+    width: 50px;
+    height: 50px;
+}
+.service-content h3 {
+    font-size: 1.3rem;
+}
+
+
+/* ****WORK.HTML**** */
+
+.product-line-content {
+    margin-bottom: 100px;
+}
+.product-line-content img {
+    width: 100%;
+}
+.product-line-content h3 {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    font-size: 1.3rem;
+}
+.product-line-content p {
+    margin: 0;
 }
