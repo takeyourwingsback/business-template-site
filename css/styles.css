@@ -31,6 +31,7 @@ p {
     padding: 1.2em 1.9em;
     font-size: 0.75rem;
     letter-spacing: 2px;
+    white-space: nowrap;
     display: inline-block;
     cursor: pointer;
     color: #fff;
@@ -127,13 +128,24 @@ header nav .logo a {
     font-weight: 900;
 }
 .nav-links {
-    position: absolute; top: 70px; left: 50%;
-    transform: translate(-50%, -350px);
+    position: absolute; top: -400px; left: 50%;
+    transform: translateX(-50%);
     opacity: 0;
     width: 100%;
     background-color: var(--clr-primary);
     z-index: 100;
-    transition: transform 0.5s, opacity 0.4s;
+    transition: top 0.5s, opacity 0.5s;
+    transition-timing-function: ease-out;
+}
+#menuToggler {
+    display: none;
+}
+nav .active-btn {
+    display: none;
+}
+#menuToggler:checked ~ .nav-links {
+    top: 70px;
+    opacity: 1
 }
 .nav-links ul {
     padding: 15px 0;

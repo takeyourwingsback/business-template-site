@@ -8,8 +8,11 @@
     header nav {
         padding: 30px 0;
     }
-    nav .fa-solid {
+    nav label {
         display: none;
+    }
+    nav .active-btn {
+        display: block;
     }
     .nav-links {
         position: static; top: 0; left: 0;

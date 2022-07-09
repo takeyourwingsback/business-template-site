@@ -16,7 +16,8 @@
         <div class="container c-wide">
             <nav>
                 <div class="logo"><a href="index.html">Business</a></div>
-                <div class="nav-links" id="navLinks">
+                <input type="checkbox" id="menuToggler" name="menuToggler">
+                <div class="nav-links">
                     <ul>
                         <li><a href="about.html">About</a></li>
                         <li><a href="work.html">Work</a></li>
@@ -25,7 +26,10 @@
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
-                <i class="fa-solid fa-bars" onclick="menuToggle()"></i>
+                <label for="menuToggler">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <a class="active-btn" href="#">Contact us</a>
             </nav>
         </div>
 
@@ -74,7 +78,5 @@
     </div>
 
     <div class="footer_">Cybergoth portfolio piece &star; 2022</div>
-
-    <script src="../scripts/menuToggler.js"></script>
 </body>
 </html>
