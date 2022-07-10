@@ -1,5 +1,8 @@
 /* ***General & Common Styles*** */
 
+* {
+    box-sizing: border-box;
+}
 :root {
     --clr-primary: #1a1b1f;
 }
@@ -27,6 +30,11 @@ time, mark, audio, video {
 	font-size: 100%;
 	font-family: primaryFont, Arial, Helvetica, sans-serif; /* Montserrat font */
 	vertical-align: baseline;
+}
+input, textarea,
+input::placeholder,
+textarea::placeholder {
+    font-family: primaryFont, Arial, Helvetica, sans-serif; /* Montserrat font */
 }
 a {
     text-decoration: none;

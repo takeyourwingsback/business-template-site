@@ -17,7 +17,7 @@ h2 {
 }
 h3 {
     text-transform: capitalize;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 500;
     margin-bottom: 1.2em;
 }
@@ -41,6 +41,9 @@ p {
     width: 90%;
     margin-inline: auto;
     text-align: center;
+}
+.c-wide {
+    width: 95%;
 }
 .banner {
     margin-bottom: 100px;
@@ -114,8 +117,8 @@ header {
     position: relative;
 }
 header nav {
-    padding: 20px 0;
-    width: 100%;
+    padding: 20px 15px;
+    /* width: 100%; */
     position: relative;
     font-size: 1.5rem;
     color: var(--clr-primary);
@@ -194,7 +197,7 @@ nav .active-btn {
     text-align: center;
 }
 .intro-headline h2 {
-    line-height: 1.5em;
+    line-height: 1.6em;
 }
 
 
@@ -204,16 +207,13 @@ nav .active-btn {
     width: 80%;
     margin-inline: auto;
 }
-.section-services .sub-section .sub-section_col {
+.smart-wrap .sub-section .sub-section_col {
     flex-basis: 40%;
 }
 .service-content img {
     margin-bottom: 30px;
     width: 50px;
     height: 50px;
-}
-.service-content h3 {
-    font-size: 1.3rem;
 }
 
 
@@ -228,8 +228,107 @@ nav .active-btn {
 .product-line-content h3 {
     margin-top: 2em;
     margin-bottom: 0.5em;
-    font-size: 1.3rem;
 }
 .product-line-content p {
     margin: 0;
+}
+
+
+/* ****TEAM.HTML**** */
+
+.place-your-photo {
+    height: 400px;
+    width: 100%;
+    background: #f0f0f0;
+}
+.team-content h3 {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+}
+.team-content p {
+    margin: 0;
+}
+
+
+/* ****BLOG.HTML**** */
+
+.blog-article {
+    margin-bottom: 100px;
+    text-align: left;
+}
+.blog-article img {
+    width: 100%;
+}
+.blog-article-content {
+    max-width: 800px;
+    margin-inline: auto;
+}
+.blog-article-content h3 {
+    font-size: 1.9rem;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+}
+.blog-article-content p {
+    margin-bottom: 1.5em
+}
+
+
+/* ****CONTACT.HTML**** */
+.contact-sub-section {
+    width: 80%;
+    margin-inline: auto;
+}
+.contact-form {
+    border: 1px solid rgb(227, 227, 227);
+    padding: 25px;
+}
+.input-wrap {
+    margin-top: 30px;
+    text-align: left;
+}
+.input-wrap label {
+    display: inline-block;
+    margin: 30px 0 10px 0;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.input-wrap input[type="text"],
+.input-wrap input[type="email"],
+.input-wrap textarea {
+    display: block;
+    outline: none;
+    border: 1px solid rgb(227, 227, 227);
+    width: 100%;
+    padding: 15px;
+    font-size: 0.9rem;
+    resize: none;
+}
+.input-wrap input::placeholder,
+.input-wrap textarea::placeholder {
+    color: var(--clr-primary);
+    opacity: 0.4;
+}
+.input-wrap .active-btn {
+    margin-top: 30px;
+    width: 100%;
+}
+.adress-col {
+    margin: 70px auto 0;
+}
+.adress-col-line {
+    margin: 30px 0;
+}
+.adress-col-line:first-child {
+    margin-top: 0;
+}
+.adress-col-line h6 {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+.adress-col-line p {
+    margin-top: 15px;
+}
+.adress-col-line a {
+    text-decoration: underline;
 }
