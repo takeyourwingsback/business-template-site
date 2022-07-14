@@ -1,13 +1,51 @@
-/* ***Styles main file*** *Mobile-first structure* */
+/* *** Styles main file*** *Mobile-first priority* */
+
 :root {
     --clr-primary: #1a1b1f;
 }
 /* ----------------------- */
 
-
-.clr-light {
-    opacity: 0.6;
+.container {
+    width: 90%;
+    margin-inline: auto;
+    text-align: center;
 }
+.c-wide {
+    width: 95%;
+}
+.section {
+    margin-bottom: 110px;
+}
+
+/* ------- Flexbox Layout ------- */
+.sub-section {
+    margin: 80px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.sub-section-col {
+    width: 75%;
+    margin-inline: auto;
+    margin-bottom: 30px;
+}
+.sub-section-col:last-child {
+    margin-bottom: 0;
+}
+.smart-wrap-col {
+    flex-basis: 80%;
+}
+.align-center {
+    align-items: center;
+}
+.wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+.direction-reverse {
+    flex-direction: row-reverse;
+}
+
+/* ------- General element selectors ------- */
 h2, p {
     color: var(--clr-primary);
 }
@@ -37,6 +75,11 @@ hr {
     opacity: 0.3;
     margin: 70px 0;
 }
+
+/* ------- General .class selectors ------- */
+.clr-light {
+    opacity: 0.6;
+}
 .active-btn {
     text-transform: uppercase;
     padding: 1.2em 1.9em;
@@ -52,14 +95,6 @@ hr {
 .active-btn:hover {
     opacity: 0.9;
 }
-.container {
-    width: 90%;
-    margin-inline: auto;
-    text-align: center;
-}
-.c-wide {
-    width: 95%;
-}
 .banner {
     margin-bottom: 100px;
 }
@@ -68,32 +103,6 @@ hr {
     margin-bottom: 1.5em;
     letter-spacing: 1px;
     font-size: 0.8em;
-}
-.section {
-    margin-bottom: 110px;
-}
-.sub-section {
-    margin: 80px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.align-center {
-    align-items: center;
-}
-.wrap-reverse {
-    flex-wrap: wrap-reverse;
-}
-.direction-reverse {
-    flex-direction: row-reverse;
-}
-.sub-section_col {
-    width: 75%;
-    margin-inline: auto;
-    margin-bottom: 30px;
-}
-.sub-section_col:last-child {
-    margin-bottom: 0;
 }
 .sub-section img {
     max-width: 100%;
@@ -126,7 +135,7 @@ hr {
 }
 
 
-/* *** Header *** */
+/* ------- Header & Navbar ------- */
 header {
     position: relative;
 }
@@ -230,13 +239,14 @@ nav .active-btn {
     max-width: 70ch;
     margin-inline: auto;
 }
-.smart-wrap .sub-section .sub-section_col {
-    flex-basis: 40%;
-}
-.service-content img {
+.icon-service {
     margin-bottom: 30px;
     width: 50px;
     height: 50px;
+    transition: transform 0.5s;
+}
+.icon-service:hover {
+    transform: scale(1.2);
 }
 
 
@@ -263,6 +273,10 @@ nav .active-btn {
     height: 400px;
     width: 100%;
     background: #f0f0f0;
+    transition: transform 0.5s;
+}
+.place-your-photo:hover {
+    transform: scale(1.05);
 }
 .team-content h3 {
     margin-top: 2em;
@@ -297,6 +311,7 @@ nav .active-btn {
 
 
 /* ****CONTACT.HTML**** */
+
 .contact-sub-section {
     width: 80%;
     margin-inline: auto;

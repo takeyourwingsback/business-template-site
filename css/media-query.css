@@ -1,10 +1,12 @@
-@media (max-width: 767px) {
-    .smart-wrap .sub-section .sub-section_col {
-        flex-basis: 80%;
+/* *** Media Query - Desktop version *** */
+
+@media (min-width: 767px) and (max-width: 991px) { /* Breakpoint for smart-wrap ONLY */
+    .smart-wrap-col {
+        flex-basis: 40%;
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 992px) { /* Breakpoint for Desktop layout */
     header nav {
         padding: 30px 0;
     }
@@ -53,7 +55,7 @@
     .smart-wrap .sub-section {
         flex-wrap: wrap;
     }
-    .smart-wrap .sub-section .sub-section_col {
+    .smart-wrap-col {
         flex-basis: 30%;
     }
     .sub-section .text-sub-section_wrap {
@@ -64,7 +66,7 @@
     .sub-section .img-sub-section_wrap {
         flex-basis: 60%;
     }
-    .sub-section_col {
+    .sub-section-col {
         flex-basis: 29%;
         text-align: left;
     }
