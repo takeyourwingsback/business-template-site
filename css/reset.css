@@ -1,11 +1,9 @@
 /* ***General & Common Styles*** */
 
-* {
-    box-sizing: border-box;
+html {
+    font-family: primaryFont, Arial, Helvetica, sans-serif; /* Montserrat font */
 }
-:root {
-    --clr-primary: #1a1b1f;
-}
+
 @font-face {
     font-family: primaryFont;
     src: url(../fonts/Montserrat_wght.ttf)
@@ -28,24 +26,13 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font-family: primaryFont, Arial, Helvetica, sans-serif; /* Montserrat font */
+    box-sizing: border-box;
 	vertical-align: baseline;
 }
 input, textarea,
 input::placeholder,
 textarea::placeholder {
     font-family: primaryFont, Arial, Helvetica, sans-serif; /* Montserrat font */
-}
-a {
-    text-decoration: none;
-    color: var(--clr-primary);
-}
-ol, ul {
-    list-style-type: none;
-}
-hr {
-    opacity: 0.3;
-    margin: 70px 0;
 }
 
 /* HTML5 display reset for older browsers */

@@ -26,6 +26,17 @@ p {
     font-size: 1rem;
     line-height: 1.8em;
 }
+a {
+    text-decoration: none;
+    color: var(--clr-primary);
+}
+ol, ul {
+    list-style-type: none;
+}
+hr {
+    opacity: 0.3;
+    margin: 70px 0;
+}
 .active-btn {
     text-transform: uppercase;
     padding: 1.2em 1.9em;
@@ -36,6 +47,10 @@ p {
     cursor: pointer;
     color: #fff;
     background-color: #1a1b1f;
+    transition: opacity 0.4s;
+}
+.active-btn:hover {
+    opacity: 0.9;
 }
 .container {
     width: 90%;
@@ -58,7 +73,6 @@ p {
     margin-bottom: 110px;
 }
 .sub-section {
-    /* margin: 50px auto 50px; */
     margin: 80px 0;
     display: flex;
     flex-wrap: wrap;
@@ -118,7 +132,6 @@ header {
 }
 header nav {
     padding: 20px 15px;
-    /* width: 100%; */
     position: relative;
     font-size: 1.5rem;
     color: var(--clr-primary);
@@ -146,7 +159,7 @@ header nav .logo a {
 nav .active-btn {
     display: none;
 }
-#menuToggler:checked ~ .nav-links {
+#menuToggler:checked + .nav-links {
     top: 70px;
     opacity: 1
 }
@@ -161,6 +174,12 @@ nav .active-btn {
     font-size: 0.85rem;
     font-weight: 700;
     color: #dedede;
+    opacity: 0.8;
+    transition: opacity 0.4s, color 0.4s;
+}
+.nav-links ul li a:hover {
+    opacity: 1;
+    color: #ebebeb;
 }
 .banner-intro .container {
     padding: 150px 0;
@@ -177,7 +196,7 @@ nav .active-btn {
     margin-inline: auto;
     text-align: center;
 }
-.banner-content h1, .banner-content p {
+.banner-content :is(h1, p) {
     color: #fff;
 }
 .banner-content h1 {
@@ -190,6 +209,10 @@ nav .active-btn {
     font-size: 0.9rem;
     color: #000;
     background-color: #fff;
+    transition: opacity 0.4s;
+}
+.banner-content .active-btn:hover {
+    opacity: 0.9;
 }
 .intro-headline {
     width: 81%;
@@ -204,7 +227,7 @@ nav .active-btn {
 /* ****ABOUT.HTML**** */
 
 .about-content {
-    width: 80%;
+    max-width: 70ch;
     margin-inline: auto;
 }
 .smart-wrap .sub-section .sub-section_col {
@@ -293,9 +316,7 @@ nav .active-btn {
     font-size: 0.9rem;
     font-weight: 500;
 }
-.input-wrap input[type="text"],
-.input-wrap input[type="email"],
-.input-wrap textarea {
+.input-wrap :is(input[type="text"], input[type="email"], textarea) {
     display: block;
     outline: none;
     border: 1px solid rgb(227, 227, 227);
@@ -304,8 +325,7 @@ nav .active-btn {
     font-size: 0.9rem;
     resize: none;
 }
-.input-wrap input::placeholder,
-.input-wrap textarea::placeholder {
+.input-wrap :is(input::placeholder, textarea::placeholder) {
     color: var(--clr-primary);
     opacity: 0.4;
 }
