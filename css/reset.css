@@ -1,9 +1,5 @@
 /* *** Reset default HTML browser properties *** */
 
-html {
-    font-family: primaryFont, Arial, Helvetica, sans-serif; /* Montserrat font */
-}
-
 @font-face {
     font-family: primaryFont;
     src: url(../fonts/Montserrat_wght.ttf)
@@ -26,13 +22,37 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 	vertical-align: baseline;
+}
+html {
+    font-family: primaryFont, sans-serif; /* Montserrat font */
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+    font-family: primaryFont, sans-serif; /* Montserrat font */
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+	box-sizing: border-box;
+    font-family: primaryFont, sans-serif; /* Montserrat font */
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+	box-sizing: border-box;
+    font-family: primaryFont, sans-serif; /* Montserrat font */
+}
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+	box-sizing: border-box;
+    font-family: primaryFont, sans-serif; /* Montserrat font */
 }
 input, textarea,
 input::placeholder,
 textarea::placeholder {
-    font-family: primaryFont, Arial, Helvetica, sans-serif; /* Montserrat font */
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+    font-family: primaryFont, sans-serif; /* Montserrat font */
 }
 
 /* HTML5 display reset for older browsers */

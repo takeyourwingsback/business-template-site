@@ -20,29 +20,41 @@
 /* ------- Flexbox Layout ------- */
 .sub-section {
     margin: 80px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
 }
 .sub-section-col {
     width: 75%;
     margin-inline: auto;
-    margin-bottom: 30px;
+    margin-bottom: 70px;
 }
 .sub-section-col:last-child {
     margin-bottom: 0;
 }
 .smart-wrap-col {
-    flex-basis: 80%;
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
 }
 .align-center {
-    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
 }
 .wrap-reverse {
-    flex-wrap: wrap-reverse;
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
 }
 .direction-reverse {
-    flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
 }
 
 /* ------- General element selectors ------- */
@@ -76,9 +88,15 @@ hr {
     margin: 70px 0;
 }
 
-/* ------- General .class selectors ------- */
+/* ------- General visual .class selectors ------- */
 .clr-light {
     opacity: 0.6;
+}
+.label {
+    text-transform: uppercase;
+    margin-bottom: 1.5em;
+    letter-spacing: 1px;
+    font-size: 0.8em;
 }
 .active-btn {
     text-transform: uppercase;
@@ -95,66 +113,35 @@ hr {
 .active-btn:hover {
     opacity: 0.9;
 }
-.banner {
-    margin-bottom: 100px;
-}
-.label {
-    text-transform: uppercase;
-    margin-bottom: 1.5em;
-    letter-spacing: 1px;
-    font-size: 0.8em;
-}
-.sub-section img {
-    max-width: 100%;
-    margin-inline: auto;
-}
-.sub-section .text-sub-section_wrap {
-    margin-top: 50px;
-}
-.banner-bottom .container {
-    padding: 100px 0;
-    text-align: center;
-    background-color: rgb(235, 234, 234);
-}
-.bottom-content {
-    width: 80%;
-    margin-inline: auto;
-}
-.bottom-content h2 {
-    font-size: 2rem;
-}
-.bottom-content .active-btn {
-    font-size: 0.9rem;
-}
-.footer_ {
-    width: 90%;
-    margin-inline: auto;
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 1.1rem;
-}
-
 
 /* ------- Header & Navbar ------- */
 header {
     position: relative;
 }
-header nav {
+nav {
     padding: 20px 15px;
     position: relative;
     font-size: 1.5rem;
     color: var(--clr-primary);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
 }
-header nav .logo a {
+nav .logo a {
     text-decoration: underline;
     font-weight: 900;
 }
 .nav-links {
     position: absolute; top: -400px; left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
     opacity: 0;
     width: 100%;
     background-color: var(--clr-primary);
@@ -162,9 +149,7 @@ header nav .logo a {
     transition: top 0.5s, opacity 0.5s;
     transition-timing-function: ease-out;
 }
-#menuToggler {
-    display: none;
-}
+#menuToggler,
 nav .active-btn {
     display: none;
 }
@@ -175,10 +160,10 @@ nav .active-btn {
 .nav-links ul {
     padding: 15px 0;
 }
-.nav-links ul li {
+.nav-links li {
     padding: 12px 0;
 }
-.nav-links ul li a {
+.nav-links a {
     text-transform: uppercase;
     font-size: 0.85rem;
     font-weight: 700;
@@ -186,15 +171,14 @@ nav .active-btn {
     opacity: 0.8;
     transition: opacity 0.4s, color 0.4s;
 }
-.nav-links ul li a:hover {
+.nav-links a:hover {
     opacity: 1;
     color: #ebebeb;
 }
-.banner-intro .container {
-    padding: 150px 0;
-    background-image: url(../images/bg-1.svg);
-    background-size: cover;
-    background-position: center;
+
+/* ------- Top + bottom banners ------- */
+.banner {
+    margin-bottom: 100px;
 }
 .banner-page .container {
     padding: 180px 0;
@@ -223,6 +207,38 @@ nav .active-btn {
 .banner-content .active-btn:hover {
     opacity: 0.9;
 }
+.banner-bottom .container {
+    padding: 100px 0;
+    text-align: center;
+    background-color: rgb(235, 234, 234);
+}
+.bottom-content {
+    width: 80%;
+    margin-inline: auto;
+}
+.bottom-content h2 {
+    font-size: 2rem;
+}
+.bottom-content .active-btn {
+    font-size: 0.9rem;
+}
+.footer_ {
+    width: 90%;
+    margin-inline: auto;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+/* -------------------------------------- */
+
+/* ****INDEX.HTML**** */
+.banner-intro .container {
+    padding: 150px 0;
+    background-image: url(../images/bg-1.svg);
+    background-size: cover;
+    background-position: center;
+}
 .intro-headline {
     width: 81%;
     margin: 100px auto 100px;
@@ -231,10 +247,15 @@ nav .active-btn {
 .intro-headline h2 {
     line-height: 1.6em;
 }
-
+.text-sub-section_wrap {
+    margin-top: 50px;
+}
+.img-sub-section_wrap img {
+    width: 100%;
+    margin-inline: auto;
+}
 
 /* ****ABOUT.HTML**** */
-
 .about-content {
     max-width: 70ch;
     margin-inline: auto;
@@ -246,12 +267,12 @@ nav .active-btn {
     transition: transform 0.5s;
 }
 .icon-service:hover {
-    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+        transform: scale(1.2);
 }
 
-
 /* ****WORK.HTML**** */
-
 .product-line-content {
     margin-bottom: 100px;
 }
@@ -266,9 +287,7 @@ nav .active-btn {
     margin: 0;
 }
 
-
 /* ****TEAM.HTML**** */
-
 .place-your-photo {
     height: 400px;
     width: 100%;
@@ -276,7 +295,12 @@ nav .active-btn {
     transition: transform 0.5s;
 }
 .place-your-photo:hover {
-    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+        transform: scale(1.05);
+}
+.team-content {
+    text-align: center;
 }
 .team-content h3 {
     margin-top: 2em;
@@ -286,9 +310,7 @@ nav .active-btn {
     margin: 0;
 }
 
-
 /* ****BLOG.HTML**** */
-
 .blog-article {
     margin-bottom: 100px;
     text-align: left;
@@ -309,11 +331,9 @@ nav .active-btn {
     margin-bottom: 1.5em
 }
 
-
 /* ****CONTACT.HTML**** */
-
 .contact-sub-section {
-    width: 80%;
+    width: 95%;
     margin-inline: auto;
 }
 .contact-form {

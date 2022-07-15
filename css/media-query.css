@@ -2,12 +2,41 @@
 
 @media (min-width: 767px) and (max-width: 991px) { /* Breakpoint for smart-wrap ONLY */
     .smart-wrap-col {
-        flex-basis: 40%;
+        -ms-flex-preferred-size: 40%;
+            flex-basis: 40%;
     }
 }
 
-@media (min-width: 992px) { /* Breakpoint for Desktop layout */
-    header nav {
+@media (min-width: 992px) { /* Desktop */
+
+    .container {
+        max-width: 1140px;
+    }
+    .c-wide {
+        max-width: 95%;
+    }
+
+    /* ------- Flexbox layout ------- */
+    .sub-section {
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    }
+    .sub-section-col {
+        -ms-flex-preferred-size: 29%;
+            flex-basis: 29%;
+        text-align: left;
+    }
+    .smart-wrap .sub-section {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    }
+    .smart-wrap-col {
+        -ms-flex-preferred-size: 30%;
+            flex-basis: 30%;
+    }
+
+    /* ------- Navbar ------- */
+    nav {
         padding: 30px 0;
     }
     nav label {
@@ -18,6 +47,8 @@
     }
     .nav-links {
         position: static; top: 0; left: 0;
+        -webkit-transform: none;
+        -ms-transform: none;
         transform: none;
         opacity: 1;
         background-color: transparent;
@@ -25,51 +56,27 @@
     }
     .nav-links ul {
         padding: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     }
-    .nav-links ul li {
+    .nav-links li {
         padding: 0;
         margin: 0 20px;
     }
-    .nav-links ul li a {
+    .nav-links a {
         color: #5a5a5a;
         transition: opacity 0.4s, color 0.4s;
     }
-    .nav-links ul li a:hover {
+    .nav-links a:hover {
         opacity: 1;
         color: #292929;
     }
-    .banner-intro .container {
-        padding: 200px 0;
-    }
-    .container {
-        max-width: 1140px;
-    }
-    .c-wide {
-        max-width: 95%;
-    }
-    .sub-section {
-        flex-wrap: nowrap;
-    }
-    .smart-wrap .sub-section {
-        flex-wrap: wrap;
-    }
-    .smart-wrap-col {
-        flex-basis: 30%;
-    }
-    .sub-section .text-sub-section_wrap {
-        flex-basis: 31%;
-        margin-top: 0;
-        text-align: left;
-    }
-    .sub-section .img-sub-section_wrap {
-        flex-basis: 60%;
-    }
-    .sub-section-col {
-        flex-basis: 29%;
-        text-align: left;
-    }
+
+    /* ------- Top + bottom banners ------- */
     .banner-content h1 {
         font-size: 4rem;
         margin-bottom: 0.2em;
@@ -77,9 +84,6 @@
     .banner-content p {
         font-size: 1.2rem;
         margin: 0;
-    }
-    .section-bottom .container {
-        padding: 120px 0;
     }
     .bottom-content {
         max-width: 750px;
@@ -91,17 +95,30 @@
         font-size: 1.2rem;
     }
 
+    /* -------------------------------------- */
+
+    /* ****INDEX.HTML**** */
+    .banner-intro .container {
+        padding: 200px 0;
+    }
+    .text-sub-section_wrap {
+        -ms-flex-preferred-size: 31%;
+            flex-basis: 31%;
+        margin-top: 0;
+        text-align: left;
+    }
+    .img-sub-section_wrap {
+        -ms-flex-preferred-size: 60%;
+            flex-basis: 60%;
+    }
     
     /* ****ABOUT.HTML**** */
-
     .service-content {
         max-width: 30ch;
         margin-inline: auto;
     }
 
-
     /* ****CONTACT.HTML**** */
-    
     .contact-sub-section {
         width: 100%;
         text-align: left;
@@ -109,10 +126,12 @@
     }
     .contact-form {
         padding: 70px 50px;
-        flex-basis: 65%;
+        -ms-flex-preferred-size: 65%;
+            flex-basis: 65%;
     }
     .adress-col {
         margin: 0;
-        flex-basis: 28%;
+        -ms-flex-preferred-size: 28%;
+            flex-basis: 28%;
     }
 }
