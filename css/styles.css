@@ -113,6 +113,12 @@ hr {
 .active-btn:hover {
     opacity: 0.9;
 }
+.heading-link {
+    transition: opacity 0.15s;
+}
+.heading-link:hover {
+    opacity: 0.8;
+}
 
 /* ------- Header & Navbar ------- */
 header {
@@ -182,7 +188,7 @@ nav .active-btn {
 }
 .banner-page .container {
     padding: 180px 0;
-    background: linear-gradient(to top left, rgb(28, 25, 25), rgb(0, 0, 0));
+    background: linear-gradient(to top left, #1c1919, #000000);
 }
 .banner-content {
     width: 80%;
@@ -207,10 +213,19 @@ nav .active-btn {
 .banner-content .active-btn:hover {
     opacity: 0.9;
 }
+.intro-headline {
+    width: 81%;
+    margin: 100px auto 100px;
+    text-align: center;
+}
+.intro-headline-heading {
+    line-height: 1.6em;
+    font-size: 1.5rem;
+}
 .banner-bottom .container {
     padding: 100px 0;
     text-align: center;
-    background-color: rgb(235, 234, 234);
+    background-color: #ebeaea;
 }
 .bottom-content {
     width: 80%;
@@ -238,14 +253,6 @@ nav .active-btn {
     background-image: url(../images/bg-1.svg);
     background-size: cover;
     background-position: center;
-}
-.intro-headline {
-    width: 81%;
-    margin: 100px auto 100px;
-    text-align: center;
-}
-.intro-headline h2 {
-    line-height: 1.6em;
 }
 .text-sub-section_wrap {
     margin-top: 50px;
@@ -337,7 +344,7 @@ nav .active-btn {
     margin-inline: auto;
 }
 .contact-form {
-    border: 1px solid rgb(227, 227, 227);
+    border: 1px solid #e3e3e3;
     padding: 25px;
 }
 .input-wrap {
@@ -354,7 +361,7 @@ nav .active-btn {
 .input-wrap :is(input[type="text"], input[type="email"], textarea) {
     display: block;
     outline: none;
-    border: 1px solid rgb(227, 227, 227);
+    border: 1px solid #e3e3e3;
     width: 100%;
     padding: 15px;
     font-size: 0.9rem;
@@ -386,4 +393,9 @@ nav .active-btn {
 }
 .adress-col-line a {
     text-decoration: underline;
+}
+.google-maps-view {
+    border:0; 
+    width: 100%;
+    min-height: 400px;
 }

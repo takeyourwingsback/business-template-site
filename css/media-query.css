@@ -1,6 +1,12 @@
 /* *** Media Query - Desktop version *** */
 
-@media (min-width: 767px) and (max-width: 991px) { /* Breakpoint for smart-wrap ONLY */
+@media (min-width: 569px) {
+    .intro-headline-heading {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
     .smart-wrap-col {
         -ms-flex-preferred-size: 40%;
             flex-basis: 40%;
@@ -84,6 +90,9 @@
     .banner-content p {
         font-size: 1.2rem;
         margin: 0;
+    }
+    .intro-headline-heading {
+        font-size: 2.2rem;
     }
     .bottom-content {
         max-width: 750px;
